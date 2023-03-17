@@ -14,7 +14,8 @@ void input() {
         if (n <= 20)
             break;
         else {
-            cout << "\nArray dapat mempunyai maksimal 20 elemen.\n";
+            cout << "\nArray dapat mempunyai maks
+                imal 20 elemen.\n";
         }
     }
     cout<<endl;
