@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-int a[20];a
+int a[20];
 int n;
 
 void input() {
@@ -42,10 +42,26 @@ void display() {
     cout << endl;
 }
 
+void BubbleShortArray() { //procedure untuk mengurutkan array dengan metode bubbleshort
+    for (int i = 1; i < n; i++) { //looping dengan i dimaulai dari 1 hingga n-1
+        for (int j = 0; j < n - i; j++) { //looping dengan j dimulai dari 0 hingga n-1
+            if (a[j] > a[j + 1]) { //jika nilai pada a[j] lebih besar dari a[j + 1]
+                int temp = a[j]; //simpan nilai a[j] ke variabel sementara temp
+                a[j] = a[j + 1]; //assign nilai a[j + 1] ke a[j]
+                a[j + 1] = temp; //assign nilai temp ke a[j + 1]
+            }
+        }
+    }
+}
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    input();
+    BubbleShortArray();
+    display();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
